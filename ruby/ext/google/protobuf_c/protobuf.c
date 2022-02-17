@@ -188,7 +188,7 @@ static void Arena_free(void *data) {
 static VALUE cArena;
 
 const rb_data_type_t Arena_type = {
-    "Google::Protobuf::Internal::Arena",
+    "Solutionario::Sentio::Google::Protobuf::Internal::Arena",
     {Arena_mark, Arena_free, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -448,7 +448,9 @@ VALUE Google_Protobuf_deep_copy(VALUE self, VALUE obj) {
 __attribute__((visibility("default"))) void Init_protobuf_c() {
   ObjectCache_Init();
 
-  VALUE google = rb_define_module("Google");
+  VALUE solutionario = rb_define_module("Solutionario");
+  VALUE sentio = rb_define_module_under(solutionario, "Sentio");
+  VALUE google = rb_define_module_under(sentio, "Google");
   VALUE protobuf = rb_define_module_under(google, "Protobuf");
 
   Arena_register(protobuf);

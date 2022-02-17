@@ -95,7 +95,7 @@ static void DescriptorPool_free(void* _self) {
 }
 
 static const rb_data_type_t DescriptorPool_type = {
-    "Google::Protobuf::DescriptorPool",
+    "Solutionario::Sentio::Google::Protobuf::DescriptorPool",
     {DescriptorPool_mark, DescriptorPool_free, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -235,7 +235,7 @@ static void Descriptor_mark(void* _self) {
 }
 
 static const rb_data_type_t Descriptor_type = {
-    "Google::Protobuf::Descriptor",
+    "Solutionario::Sentio::Google::Protobuf::Descriptor",
     {Descriptor_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -427,7 +427,7 @@ static void FileDescriptor_mark(void* _self) {
 }
 
 static const rb_data_type_t FileDescriptor_type = {
-    "Google::Protobuf::FileDescriptor",
+    "Solutionario::Sentio::Google::Protobuf::FileDescriptor",
     {FileDescriptor_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -529,7 +529,7 @@ static void FieldDescriptor_mark(void* _self) {
 }
 
 static const rb_data_type_t FieldDescriptor_type = {
-    "Google::Protobuf::FieldDescriptor",
+    "Solutionario::Sentio::Google::Protobuf::FieldDescriptor",
     {FieldDescriptor_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -894,7 +894,7 @@ static void OneofDescriptor_mark(void* _self) {
 }
 
 static const rb_data_type_t OneofDescriptor_type = {
-    "Google::Protobuf::OneofDescriptor",
+    "Solutionario::Sentio::Google::Protobuf::OneofDescriptor",
     {OneofDescriptor_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
@@ -1000,7 +1000,7 @@ static void EnumDescriptor_mark(void* _self) {
 }
 
 static const rb_data_type_t EnumDescriptor_type = {
-    "Google::Protobuf::EnumDescriptor",
+    "Solutionario::Sentio::Google::Protobuf::EnumDescriptor",
     {EnumDescriptor_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };

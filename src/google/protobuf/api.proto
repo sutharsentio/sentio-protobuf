@@ -30,7 +30,7 @@
 
 syntax = "proto3";
 
-package google.protobuf;
+package solutionario.sentio.google.protobuf;
 
 import "google/protobuf/source_context.proto";
 import "google/protobuf/type.proto";

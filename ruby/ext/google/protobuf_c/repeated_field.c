@@ -55,7 +55,7 @@ static void RepeatedField_mark(void* _self) {
 }
 
 const rb_data_type_t RepeatedField_type = {
-    "Google::Protobuf::RepeatedField",
+    "Solutionario::Sentio::Google::Protobuf::RepeatedField",
     {RepeatedField_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };

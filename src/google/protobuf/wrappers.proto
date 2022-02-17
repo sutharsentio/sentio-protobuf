@@ -40,7 +40,7 @@
 
 syntax = "proto3";
 
-package google.protobuf;
+package solutionario.sentio.google.protobuf;
 
 option csharp_namespace = "Google.Protobuf.WellKnownTypes";
 option cc_enable_arenas = true;

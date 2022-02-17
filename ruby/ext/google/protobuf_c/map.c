@@ -62,7 +62,7 @@ static void Map_mark(void* _self) {
 }
 
 const rb_data_type_t Map_type = {
-    "Google::Protobuf::Map",
+    "Solutionario::Sentio::Google::Protobuf::Map",
     {Map_mark, RUBY_DEFAULT_FREE, NULL},
     .flags = RUBY_TYPED_FREE_IMMEDIATELY,
 };
