@@ -57,13 +57,13 @@ unless ENV['IN_DOCKER'] == 'true'
     end
   end
 
-  test_protos.each do |proto_file|
-    output_file = proto_file.sub(/\.proto$/, "_pb.rb")
-    genproto_output << output_file
-    file output_file => proto_file do |file_task|
-      sh "#{protoc_command} -I../src -I. -I./tests --ruby_out=.  #{proto_file}"
-    end
-  end
+  #test_protos.each do |proto_file|
+  #  output_file = proto_file.sub(/\.proto$/, "_pb.rb")
+  #  genproto_output << output_file
+  #  file output_file => proto_file do |file_task|
+  #    sh "#{protoc_command} -I../src -I. -I./tests --ruby_out=.  #{proto_file}"
+  #  end
+  #end
 end
 
 if RUBY_PLATFORM == "java"
@@ -120,9 +120,9 @@ else
   end
 
   task 'gem:windows' do
-    sh "rm Gemfile.lock"
+    #sh "rm Gemfile.lock"
     require 'rake_compiler_dock'
-    ['x86-mingw32', 'x64-mingw32', 'x86_64-linux', 'x86-linux'].each do |plat|
+    ['x64-mingw32'].each do |plat|
       RakeCompilerDock.sh <<-"EOT", platform: plat
         bundle && \
         IN_DOCKER=true rake native:#{plat} pkg/#{spec.full_name}-#{plat}.gem RUBY_CC_VERSION=3.0.0:2.7.0:2.6.0:2.5.0
